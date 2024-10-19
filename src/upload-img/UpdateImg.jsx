@@ -4,7 +4,7 @@ const cloudName = import.meta.env.VITE_CLOUD_NAME;
 export const uploadImageToCloudinary = async (imageFile) => {
   const formData = new FormData();
   formData.append("file", imageFile);
-  formData.append("upload_preset", "e-commerce"); // Cloudinary's upload preset
+  formData.append("upload_preset", "portfili-preset"); // Cloudinary's upload preset
   try {
     const response = await fetch(
       `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
